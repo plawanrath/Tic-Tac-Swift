@@ -37,6 +37,7 @@ class ViewController: UIViewController {
     var done = false
     var aiDeciding = false
     
+    
     @IBAction func UIBottonClicked(sender: UIButton) {
         UserMessage.hidden = true
         if (plays[sender.tag] != 0 || plays[sender.tag] != 1) && aiDeciding == false && done == false {
@@ -202,7 +203,7 @@ class ViewController: UIViewController {
         
         aiDeciding = true
         
-        //The computer has 2 in a row
+        //The 0 has 2 in a row
         if let result = rowCheck(value:0) {
             var whereToPlayResult = whereToPlay(result.location,pattern: result.pattern)
             if !isOccupied(whereToPlayResult) {
